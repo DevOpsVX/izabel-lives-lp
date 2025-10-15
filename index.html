@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participe das Nossas Lives - Izabel de Paula</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <h1>IZABEL</h1>
+                <p class="logo-subtitle">de Paula</p>
+            </div>
+            
+            <h2 class="title">Participe das Nossas Lives</h2>
+            
+            <p class="description">
+                Inscreva-se para receber informações exclusivas sobre as lives da Izabel de Paula e transforme sua carreira com o melhor método da Europa.
+            </p>
+            
+            <form id="liveForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        placeholder="Digite seu nome completo" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="seu@email.com" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone *</label>
+                    <input 
+                        type="tel" 
+                        id="telefone" 
+                        name="telefone" 
+                        placeholder="(00) 00000-0000" 
+                        required
+                    >
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Quero Participar das Lives
+                </button>
+                
+                <p class="disclaimer">
+                    Ao se inscrever, você concorda em receber comunicações sobre as lives e conteúdos exclusivos.
+                </p>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>✓ Inscrição realizada com sucesso! Você receberá informações sobre as lives em breve.</p>
+            </div>
+            
+            <div id="errorMessage" class="error-message" style="display: none;">
+                <p>✗ Ocorreu um erro ao processar sua inscrição. Por favor, tente novamente.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
