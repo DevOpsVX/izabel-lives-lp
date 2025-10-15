@@ -1,3 +1,4 @@
+/* Reset e estrutura base */
 * {
     margin: 0;
     padding: 0;
@@ -12,40 +13,45 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    opacity: 0;
+    animation: fadeInBody 1.2s ease forwards;
 }
 
+/* Container */
 .container {
     width: 100%;
     max-width: 600px;
 }
 
+/* Card */
 .card {
     background: white;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     padding: 60px 50px;
     text-align: center;
+    opacity: 0;
+    animation: fadeInCard 1.4s ease-out forwards;
 }
 
+/* Logo */
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
 }
 
-.logo h1 {
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #1a1a1a;
-    margin-bottom: 5px;
+.logo-img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    opacity: 0;
+    animation: fadeInLogo 1.4s ease-out forwards;
 }
 
-.logo-subtitle {
-    font-size: 16px;
-    font-weight: 400;
-    color: #666;
-    font-style: italic;
-}
-
+/* Textos */
 .title {
     font-size: 36px;
     font-weight: 700;
@@ -61,6 +67,7 @@ body {
     margin-bottom: 40px;
 }
 
+/* Formulário */
 .form-group {
     margin-bottom: 24px;
     text-align: left;
@@ -95,6 +102,7 @@ body {
     color: #999;
 }
 
+/* Botão */
 .submit-btn {
     width: 100%;
     padding: 16px 32px;
@@ -125,6 +133,7 @@ body {
     transform: none;
 }
 
+/* Disclaimer */
 .disclaimer {
     font-size: 12px;
     color: #999;
@@ -132,6 +141,7 @@ body {
     line-height: 1.5;
 }
 
+/* Mensagens */
 .success-message,
 .error-message {
     margin-top: 20px;
@@ -153,14 +163,42 @@ body {
     border: 1px solid #f5c6cb;
 }
 
+/* --- Animações --- */
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .card {
         padding: 40px 30px;
-    }
-    
-    .logo h1 {
-        font-size: 36px;
     }
     
     .title {
@@ -176,13 +214,12 @@ body {
     .card {
         padding: 30px 20px;
     }
-    
-    .logo h1 {
-        font-size: 32px;
+
+    .logo-img {
+        width: 150px;
     }
-    
+
     .title {
         font-size: 24px;
     }
 }
-
