@@ -52,20 +52,14 @@ document.getElementById('liveForm').addEventListener('submit', async function(e)
             // Scroll suave para a mensagem de sucesso
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
-            // Erro na resposta
             throw new Error('Erro ao enviar formulário');
         }
     } catch (error) {
-        // Erro na requisição
         console.error('Erro:', error);
         errorMessage.style.display = 'block';
-        
-        // Scroll suave para a mensagem de erro
         errorMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } finally {
-        // Reabilitar botão
         submitBtn.disabled = false;
         submitBtn.textContent = 'Quero Participar das Lives';
     }
 });
-
